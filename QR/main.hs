@@ -5,7 +5,7 @@ import Control.Monad
 
 main :: IO [()]
 main = do
-  input  <- readFile  "input.txt" 
+  input  <- readFile  "A-small-practice.in" 
   -- rewrite splitOn " " with lambda?
   let lines = map listToInt $ map (splitOn " ") $ splitOn "\n" $ init input 
 
@@ -44,7 +44,7 @@ getIntersection lines = do
 processTestCases :: Int -> [[Int]] -> IO [()] 
 processTestCases numberOfTestCases testCases = do
   forM [0..numberOfTestCases - 1] $ \i -> do
-    appendFile "output.txt" $ "Case #" ++ (show i) ++ ": " ++ (setText $ getIntersection (tailLines (i * 10)  testCases)) ++ "\n"
+    appendFile "A-small-practice.out" $ "Case #" ++ (show (i + 1)) ++ ": " ++ (setText $ getIntersection (tailLines (i * 10)  testCases)) ++ "\n"
 
 setText :: Set.Set Int -> String 
 setText intersection
