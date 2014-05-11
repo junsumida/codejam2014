@@ -1,0 +1,3 @@
+Case #0: 7
+Case #1: Bad magician!
+Case #2: Volunteer cheated!
